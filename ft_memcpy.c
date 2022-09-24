@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2022/09/24 18:31:18 by elerner          ###   ########.fr       */
+/*   Updated: 2022/09/24 20:38:36 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	size_t	c;
+
+	c = 0;
+	if (!dest)
+		return (NULL);
+	while (c < n)
+	{
+		((char *)dest)[c] = ((char *)src)[c];
+		c++;
+	}
+	return (dest);
 }
