@@ -6,9 +6,11 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2022/09/24 20:38:36 by elerner          ###   ########.fr       */
+/*   Updated: 2022/10/11 23:17:13 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
