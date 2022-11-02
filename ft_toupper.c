@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2022/09/24 18:31:18 by elerner          ###   ########.fr       */
+/*   Created: 2022/11/02 21:12:17 by elerner           #+#    #+#             */
+/*   Updated: 2022/11/02 22:40:18 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_toupper(int c)
 {
-	return (c >= 0 && c <= 127);
+	if (ft_isalpha(c))
+	{
+		if (c >= 97 && c <= 122)
+			return (c - 32);
+	}
+	return (c);
 }
