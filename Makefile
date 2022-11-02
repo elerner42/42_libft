@@ -5,13 +5,14 @@
 #                                                    +:+ +:+         +:+     #
 #   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
-#   Created: 2022/10/11 20:47:36 by elerner           #+#    #+#             #
-#   Updated: 202#   Updated: 2022/10/11 23:00:40 by elerner          ###   ########.fr       #                                                              #
+#   Created: 2022/11/01 13:00:05 by elerner           #+#    #+#             #
+#   Updated: 2022/11/01 13:00:05 by elerner          ###   ########.fr       #
+#                                                                            #
 # ************************************************************************** #
 
 SRCS			=	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-					ft_isprint.c ft_memccpy.c ft_memmove.c ft_memset.c ft_strlcat.c \
-					ft_strlcpy.c ft_strlen.c
+					ft_isprint.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcat.c \
+					ft_strlcpy.c ft_strlen.c ft_strlcat.c
 
 OBJS			:= $(SRCS:.c=.o)
 
