@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2022/10/11 23:37:05 by elerner          ###   ########.fr       */
+/*   Updated: 2022/11/03 15:37:02 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_bzero(char *s, size_t n)
 {
 	size_t	i;
 
-	if (!s)
-		return ;
 	i = 0;
 	while (i < n)
 	{

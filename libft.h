@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 21:34:37 by elerner           #+#    #+#             */
-/*   Updated: 2022/11/02 22:39:27 by elerner          ###   ########.fr       */
+/*   Updated: 2022/11/03 15:02:28 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 //size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
+char		*ft_strchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:47:22 by elerner           #+#    #+#             */
-/*   Updated: 2022/11/03 14:54:47 by elerner          ###   ########.fr       */
+/*   Updated: 2022/11/03 15:31:20 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s == '\0')
+	char	ch;
+
+	ch = c;
+	while (*s)
 	{
-		if (*s == (char)c)
-			return ((char *)p);
+		if (*s == ch)
+			return ((char *)s);
+		if (*s == '\0')
+			return ((char *)s);
+		s++;
 	}
-	if (*s == '\0')
+	if (ch == '\0')
 		return ((char *)s);
 	return (NULL);
 }
