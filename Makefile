@@ -6,12 +6,26 @@
 #   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2022/11/02 20:43:57 by elerner           #+#    #+#             #
-#   Updated: 202#   Updated: 2022/11/03 15:01:41 by elerner          ###   ########.fr       #                                              #
+#   Updated: 202#   Updated: 2022/11/16 20:22:48 by elerner          ###   ########.fr       #                                              #
 # ************************************************************************** #
 
-SRCS			=	ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
-					ft_isprint.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcpy.c \
-					ft_strlen.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c
+SRCS			=	ft_bzero.c \
+					ft_isalnum.c \
+					ft_isalpha.c \
+					ft_isascii.c \
+					ft_isdigit.c \
+					ft_isprint.c \
+					ft_memcpy.c \
+					ft_memmove.c \
+					ft_memset.c \
+					ft_strlcpy.c \
+					ft_strlen.c \
+					ft_toupper.c \
+					ft_tolower.c \
+					ft_strchr.c \
+					ft_strrchr.c \
+					ft_strncmp.c \
+					ft_memchr.c
 
 OBJS			:= $(SRCS:.c=.o)
 
@@ -27,7 +41,7 @@ $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
 %.o:%.c
-	$(CC) -c $<  #($< -> indica el mismo nombre del archivo .c a .o)
+	$(CC) -c $<  #("$<" -> indica el mismo nombre del archivo .c a .o)
 
 clean:
 				$(RM) $(OBJS)
