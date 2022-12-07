@@ -6,7 +6,7 @@
 #   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2022/11/02 20:43:57 by elerner           #+#    #+#             #
-#   Updated: 202#   Updated: 2022/11/16 20:22:48 by elerner          ###   ########.fr       #                                              #
+#   Updated: 202#   Updated: 2022/11/30 19:07:46 by elerner          ###   ########.fr       #                                              #
 # ************************************************************************** #
 
 SRCS			=	ft_bzero.c \
@@ -26,7 +26,8 @@ SRCS			=	ft_bzero.c \
 					ft_strrchr.c \
 					ft_strncmp.c \
 					ft_memchr.c	\
-					ft_memcmp.c
+					ft_memcmp.c \
+					ft_strnstr.c
 
 OBJS			:= $(SRCS:.c=.o)
 
