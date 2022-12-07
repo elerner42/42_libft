@@ -6,9 +6,16 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 19:06:29 by elerner           #+#    #+#             */
-/*   Updated: 2022/11/30 22:50:02 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/07 21:34:09 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+ * Buscamos un string "*s2" en "*s1", buscada hasta la posición "n"
+ * en la cadena "*s1", si la encuentra retorna a partir de
+ * la primera poscion de la cadena encontrada hasta el final de
+ * "*s1".
+ */
 
 #include "libft.h"
 

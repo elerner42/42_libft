@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+ * Comparamos dos valores void "*s1 y *s2", la cantidad de
+ * posiciones que nos de "n", y retorna el valor de la
+ * diferenciia encontrada en el rango "n" y si no hay dif,
+ * retorna "0".
+ */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

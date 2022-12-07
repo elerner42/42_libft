@@ -6,7 +6,7 @@
 #   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2022/11/02 20:43:57 by elerner           #+#    #+#             #
-#   Updated: 202#   Updated: 2022/11/30 19:07:46 by elerner          ###   ########.fr       #                                              #
+#   Updated: 202#   Updated: 2022/12/07 22:17:16 by elerner          ###   ########.fr       #                                              #
 # ************************************************************************** #
 
 SRCS			=	ft_bzero.c \
@@ -42,6 +42,7 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
+		@echo "LIBFT -> Make OK!!!"
 %.o:%.c
 	$(CC) -c $<  #("$<" -> indica el mismo nombre del archivo .c a .o)
 
@@ -54,3 +55,4 @@ fclean:			clean
 re:			fclean $(NAME)
 
 .PHONY:			all clean fclean re bonus
+

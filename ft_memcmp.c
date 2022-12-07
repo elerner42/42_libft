@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:24:43 by elerner           #+#    #+#             */
-/*   Updated: 2022/11/29 18:26:06 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/07 21:12:15 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
  * diferenciia encontrada en el rangn "n" y si no hay dif,
  * retorna "0".
  */
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
