@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
     }
     while (ft_isdigit(*str))
     {
-        res = (res * 10) + (*str) - 48;
+        res = (res * 10) + (*str - 48);
         str++;
     } 
     return (res * sign);
