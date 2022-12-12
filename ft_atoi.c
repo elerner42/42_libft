@@ -6,11 +6,15 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:35:30 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/08 00:36:47 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/12 09:18:46 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*  ft_atoi: Funcion que recibe como parametro un caracter digito 
+    y retorna este digito en entero.                             
+ */
 
 static	int	ft_isspase(int c)
 {
