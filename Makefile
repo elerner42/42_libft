@@ -6,7 +6,7 @@
 #   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2022/11/02 20:43:57 by elerner           #+#    #+#             #
-#   Updated: 202#   Updated: 2022/12/07 22:17:16 by elerner          ###   ########.fr       #                                              #
+#   Updated: 202#   Updated: 2022/12/13 18:10:35 by elerner          ###   ########.fr       #                                              #
 # ************************************************************************** #
 
 SRCS			=	ft_bzero.c \
