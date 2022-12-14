@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:06:39 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/12 23:53:33 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/13 17:01:24 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-    code
+    //code
     return (0);    
 }
