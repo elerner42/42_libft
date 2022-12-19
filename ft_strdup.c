@@ -29,4 +29,3 @@ char	*ft_strdup(const char *str)
 	}
 	return (out_str);
 }
-
