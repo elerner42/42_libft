@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 21:34:37 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/15 20:33:56 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/19 19:06:17 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *s1, const char *s2, size_t n);
 int			ft_atoi(const char *str);
 void		*ft_calloc(size_t count, size_t size);
+char		*ft_strdup(const char *str);
 
 typedef struct s_list
 {
