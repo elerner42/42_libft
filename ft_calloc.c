@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 21:06:39 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/15 17:11:05 by elerner          ###   ########.fr       */
+/*   Created: 2022/12/15 17:12:33 by elerner           #+#    #+#             */
+/*   Updated: 2022/12/15 20:40:51 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	size_t	dstlen;
-	size_t	j;
+	void	*call;
 
-	dstlen = ft_strlen(dst);
-	i = 0;
-	j = dstlen;
-	if (dstlen >= dstsize)
-		return (dstsize + ft_strlen(src));
-	if (dstsize > 0)
-	{
-		while (src[i] && dstlen + i < dstsize - 1)
-		{
-			dst[j] = src[i];
-			i++;
-			j++;
-		}
-		dst[j] = '\0';
-	}
-	return (dstlen + ft_strlen(src));
+	call = (void *)malloc(count * size);
+	if (!call)
+		return (NULL);
+	ft_bzero(call, count);
+	return (call);
 }
