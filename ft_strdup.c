@@ -6,14 +6,26 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 17:43:49 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/19 17:46:45 by elerner          ###   ########.fr       */
+/*   Updated: 2022/12/19 19:27:31 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-    const int   len = ft_strlen(*str);
-    return (str);
+	size_t	len;
+	char	*out_str;
+
+	len = ft_strlen(str);
+	out_str = ft_calloc(len + 1, sizeof(char));
+	if (out_str)
+	{
+		ft_memcpy(out_str, str, len);
+	}
+	else
+	{
+		return (NULL);
+	}
+	return (out_str);
 }
