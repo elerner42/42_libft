@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 17:12:33 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/21 20:53:47 by elerner          ###   ########.fr       */
+/*   Created: 2022/12/21 15:40:59 by elerner           #+#    #+#             */
+/*   Updated: 2022/12/21 22:52:53 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-	ft_calloc asigna  memoria  para  una  matriz  de  nmemb elementos 
-	de size bytes cada uno y devuelve un puntero a la memoria asignada. 
-	La memoria es puesta a cero.
-*/
-
-void	*ft_calloc(size_t n_Element, size_t size_Element)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
-	void	*tmp;
+	size_t		a;
+	size_t		b;
+	char		*tmp;
 
-	tmp = (void *)malloc(n_Element * size_Element);
+	a = 0;
+	b = 0;
+	if (!str)
+		return (NULL);
+	if (len > ft_strlen(str))
+		len = ft_strlen(str);
+	tmp = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!tmp)
 		return (NULL);
-	ft_bzero(tmp, n_Element * size_Element);
+	if (start > len)
+	{
+		tmp[0] = '\0';
+		return (tmp);
+	}
+	while (str[a])
+	{
+		if (a >= start && b < len)
+		{
+			tmp[b] = str[a];
+			b++;
+		}
+		a++;
+	}
 	return (tmp);
 }
