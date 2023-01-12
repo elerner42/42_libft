@@ -6,14 +6,14 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:24:43 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/07 21:12:15 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/11 18:37:18 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
  * Comparamos dos valores void "*s1 y *s2", la cantidad de
  * posiciones que nos de "n", y retorna el valor de la
- * diferenciia encontrada en el rangn "n" y si no hay dif,
+ * diferenciia encontrada en el rango "n" y si no hay dif,
  * retorna "0".
  */
 

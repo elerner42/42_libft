@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:12:33 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/21 20:53:47 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/12 19:00:31 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@
 
 void	*ft_calloc(size_t n_Element, size_t size_Element)
 {
-	void	*tmp;
+	char	*m_tmp;
 
-	tmp = (void *)malloc(n_Element * size_Element);
-	if (!tmp)
+	if (size_Element != 0)
+		if (n_Element > __SIZE_MAX__ / size_Element)
+			return (NULL);
+	m_tmp = malloc(n_Element * size_Element);
+	if (!m_tmp)
 		return (NULL);
-	ft_bzero(tmp, n_Element * size_Element);
-	return (tmp);
+	ft_bzero(m_tmp, n_Element * size_Element);
+	return (m_tmp);
 }
