@@ -6,14 +6,14 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:40:59 by elerner           #+#    #+#             */
-/*   Updated: 2023/01/12 20:17:59 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/18 10:13:09 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	comentario
+	El comentario
 */
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
