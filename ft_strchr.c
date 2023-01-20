@@ -6,15 +6,20 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 14:47:22 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/19 18:52:59 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/20 13:48:10 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	Esto devuelve un puntero a la primera aparición del carácter "c" 
+	en la cadena "s", o NULL si no se encuentra el carácter.
+*/
+
 char	*ft_strchr(const char *s, int c)
 {
-	char	ch;
+	unsigned char	ch;
 
 	ch = c;
 	while (*s)

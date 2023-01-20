@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:35:30 by elerner           #+#    #+#             */
-/*   Updated: 2023/01/12 14:04:31 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/20 13:54:19 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*  
 	ft_atoi: Funcion que recibe como parametro un caracter digito 
-    y retorna este digito en entero.                             
+    y retorna este digito de tipo entero.                             
  */
 
 static	int	ft_isspase(int c)

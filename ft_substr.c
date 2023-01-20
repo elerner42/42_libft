@@ -6,14 +6,18 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:40:59 by elerner           #+#    #+#             */
-/*   Updated: 2023/01/18 10:13:09 by elerner          ###   ########.fr       */
+/*   Updated: 2023/01/20 19:36:35 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	El comentario
+	ft:substr: retorna una nueva subcadena de "str" entra las posciciones, "start"
+	y "len" que es el tamano de la subcadena.
+		
+	verificamos si la cadena es NULL
+	
 */
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
@@ -24,7 +28,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	a = 0;
 	if (!str)
 		return (NULL);
-	if (start > ft_strlen(str) || *str == '\0')
+	if (start > ft_strlen(str))
 		return (ft_strdup(""));
 	if (len + start > ft_strlen(str))
 		len = ft_strlen(str) - start;
