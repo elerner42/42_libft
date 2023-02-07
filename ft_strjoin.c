@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2023/02/07 18:33:04 by elerner          ###   ########.fr       */
+/*   Created: 2023/02/07 17:56:30 by elerner           #+#    #+#             */
+/*   Updated: 2023/02/07 18:34:57 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
+    s1: La primera string.
+    s2: La string a añadir a ’s1’.
 
-	La función memcpy() copia n bytes del área de memoria src a la memoria
-	destino del área Las áreas de memoria no deben superponerse.
-	Utilice memmove(3) si el las áreas de memoria se superponen.
+    Reserva (con malloc(3)) y devuelve una nueva
+    string, formada por la concatenación de ’s1’ y
+    ’s2’.
 */
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	c;
+    size_t  len_s3;
+    char    s3;
 
-	c = 0;
-	if ((dest == src) || n == 0)
-		return (dest);
-	while (c < n)
-	{
-		((char *)dest)[c] = ((char *)src)[c];
-		c++;
-	}
-	return (dest);
+    len_s3 = 0;
+
+    return s3;
+}
+
+int main(void)
+{
+    char *s1 = "mas sabe el diablo por ";
+    char *s2 = "viejo que por diablo";
+    
+    return (0);
 }
