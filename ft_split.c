@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:28:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/02/09 19:26:44 by elerner          ###   ########.fr       */
+/*   Updated: 2023/02/17 13:28:14 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=z_pukhnwjZc
 
 int main(){
     char cadena[] = "Esto es un texto. Puede ir separado por puntos, espacios o comas.";
-    char delimitador[] = ".";
+    char delimitador[] = " ";
     char *token = strtok(cadena, delimitador);
     if(token != NULL){
         while(token != NULL){
