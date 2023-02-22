@@ -6,17 +6,13 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 17:43:49 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/21 19:16:46 by elerner          ###   ########.fr       */
+/*   Updated: 2023/02/22 22:28:08 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-The strdup() function returns a pointer to a new string which is a duplicate
-of the string s. Memory for the new string is obtained with malloc(3),
-and can be freed with free(3).
-
 Toma un único argumento: la cadena de origen que se va a duplicar
 y devuelve el puntero a una cadena recién copiada. 
 La función devuelve NULL en caso de error, es decir, 
