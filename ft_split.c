@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:28:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/02/24 03:20:07 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/08 20:58:21 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,42 +25,23 @@
     array debe terminar con un puntero NULL.
 */
 
-/********** MI SPLIT *****************************************/
 size_t	ft_splitlen(const char *str, char c)
 {
 	size_t	len;
-	size_t	pos;	
+	size_t	p;	
 
 	len = 0;
-	pos = 0;
-	if (str[pos] == c)
+	p = 0;
+	if (str[p] == c)
 		len--;
-	while(str[pos] != '\0')
+	while (str[p] != '\0')
 	{
-		if (str[pos + 1] == '\0' || (str[pos] == c && str[pos + 1] != c))
+		if (str[p + 1] == '\0' || (str[p] == c && str[p + 1] != c))
 			len++;
-		pos++;
+		p++;
 	}
 	return (len);
 }
-/*size_t	ft_splitlen(const char *str, char c)
-{
-	size_t	len;
-	char	*tmp;
-	char	car[2];
-
-	car[0] = c;
-	car[1] = '\0';
-	tmp = ft_strtrim(str, car);
-	len = 0;
-	while (*tmp != '\0')
-	{
-		if (*tmp == car[0])
-			len++;
-		tmp++;
-	}
-	return (len);
-}*/
 
 char	*ft_settoken(const char *str, char c)
 {
@@ -109,55 +90,3 @@ char	**ft_split(const char *str, char c)
 	table[len] = NULL;
 	return (table);
 }
-
-/*
-int main(){
-    char cadena[] = "ooo,,,,,Est1o es un text2o, Puede ir, separad3o, p4or punt5os, espaci6os, c7omas.,8ooo";
-	//char cadena[100];
-    char delimitador[] = "o";
-	
-	printf("Nro de Tokens: %li\n", ft_splitlen(cadena, 'o'));
-    char *token = strtok(cadena, delimitador);
-    if(token != NULL){
-        while(token != NULL){
-            // Sólo en la primera pasamos la cadena; en las siguientes pasamos NULL
-            printf("Token: %s\n", token);
-            token = strtok(NULL, delimitador);
-        }
-
-	printf("-----------------------------------------\n");
-
-	char	**tab;
-	unsigned int	i;
-	
-	i = 0;
-	printf("Nro de Tokens: %i\n",str_count("ooo,,,,,Est1o es un text2o, Puede ir, separad3o, p4or punt5os, espaci6os, c7omas.,8ooo", 'o'));
-	tab = ft_split("ooo,,,,,Est1o es un text2o, Puede ir, separad3o, p4or punt5os, espaci6os, c7omas.,8ooo", 'o');
-	if (!tab[0])
-		puts("ok\n");
-	while (tab[i] != NULL)
-	{
-		printf("Token: %s\n", tab[i]);
-		i++;
-	}
-	//printf("\n%s\n", ft_strtrim("ooo,,,,,Est1o es un text2o, Puede ir, separad3o, p4or punt5os, espaci6os, c7omas.,ooo", "o"));
-	//puts("\n");
-	//printf("PRIMER:%s\n",ft_settoken(",,,,,Est1o es un text2o, Puede ir, separad3o, p4or punt5os, espaci6os, c7omas.,", 'o'));
-    }
-	/*
-    int len;
-    const char str[] = "Esto es un texto. Puede ir separado por puntos, espacios o comas.";
-    const char ch = 'e';
-    char *ret;
-
-	printf("Nro de Separadores: %li\n", ft_splitlen(str, ch));
-    ret = ft_memchr(str, ch, strlen(str)+1);
-	if(ret == NULL)
-	{ret = "No existe separador";}
-
-    printf("%s\n",ret);
-
-	*/
-    /*return(0);
-}
-*/
