@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:16:02 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/10 01:05:46 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/13 14:34:45 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,22 +44,22 @@ static int	ft_lendigi(int n)
 char	*ft_itoa(int n)
 {
 	int		sign;
-	int		length;
+	int		len;
 	int		tmp;
 	char	*str;
 
 	tmp = n;
-	length = ft_lendigi(n);
+	len = ft_lendigi(n);
 	sign = ft_sign(n);
 	if (sign == -1)
-		length++;
-	str = (char *)malloc (sizeof(char) * (length + 1));
+		len++;
+	str = (char *)malloc (sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	str[length] = '\0';
-	while (length--)
+	str[len] = '\0';
+	while (len--)
 	{
-		str[length] = ((n % 10) * sign) + '0';
+		str[len] = ((n % 10) * sign) + '0';
 		n = n / 10;
 	}
 	if (sign == -1)
