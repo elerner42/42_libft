@@ -53,17 +53,17 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
 
-		@echo "LIBFT -> Make OK!!!"
+		@echo "LIBFT \n\t-> Make OK!!!"
 %.o:%.c
 	@$(CC) -c $<  #("$<" -> indica el mismo nombre del archivo .c a .o)
 
 clean:
 				@$(RM) $(OBJS)
-				@echo "LIBFT -> Clean OK!!!"
+				@echo "LIBFT \n\t-> Clean OK!!!"
 
 fclean:			clean
 				@$(RM) $(NAME)
-				@echo "LIBFT -> fclean OK!!!"
+				@echo "\t-> fclean OK!!!"
 
 re:			fclean $(NAME)
 
