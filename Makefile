@@ -51,19 +51,21 @@ NAME			:= libft.a
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				ar rcs $(NAME) $(OBJS)
+				@ar rcs $(NAME) $(OBJS)
 
 		@echo "LIBFT -> Make OK!!!"
 %.o:%.c
-	$(CC) -c $<  #("$<" -> indica el mismo nombre del archivo .c a .o)
+	@$(CC) -c $<  #("$<" -> indica el mismo nombre del archivo .c a .o)
 
 clean:
-				$(RM) $(OBJS)
+				@$(RM) $(OBJS)
+				@echo "LIBFT -> Clean OK!!!"
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
+				@echo "LIBFT -> fclean OK!!!"
 
 re:			fclean $(NAME)
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
 
