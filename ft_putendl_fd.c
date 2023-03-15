@@ -6,13 +6,15 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:52:14 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/08 21:53:49 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/15 22:16:08 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "libft.h"
+#include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    return (0);
+	while (*s)
+		write(fd, &*s++, 1);
+	write(fd, "\n", 1);
 }

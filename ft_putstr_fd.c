@@ -6,13 +6,14 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:50:03 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/08 21:51:38 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/15 21:39:44 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    return (0);
+	while (*s)
+		write(fd, &*s++, 1);
 }
