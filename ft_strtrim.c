@@ -6,14 +6,14 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:07:29 by elerner           #+#    #+#             */
-/*   Updated: 2023/02/09 16:19:27 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/16 17:25:04 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-    s1: La string que debe ser recortada.
+    s: La string que debe ser recortada.
     set: Los caracteres a eliminar de la string.
     La string recortada. NULL si falla la reserva de memoria.
     

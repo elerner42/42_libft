@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:28:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/08 20:58:21 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/17 23:19:14 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,32 @@
     array debe terminar con un puntero NULL.
 */
 
-size_t	ft_splitlen(const char *str, char c)
+static char	**ft_malloc_error(char **res)
+{
+	size_t	i;
+
+	i = 0;
+	while (res[i])
+	{
+		free(res[i]);
+		res[i] = NULL;
+		i++;
+	}
+	free(res);
+	return (NULL);
+}
+
+static size_t	ft_strlen_s(const char *str, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0' && str[len] != c)
+		len++;
+	return (len);
+}
+
+static size_t	ft_splitlen(const char *str, char c)
 {
 	size_t	len;
 	size_t	p;	
@@ -43,7 +68,7 @@ size_t	ft_splitlen(const char *str, char c)
 	return (len);
 }
 
-char	*ft_settoken(const char *str, char c)
+static char	*ft_settoken(const char *str, char c)
 {
 	size_t	len;
 	char	*tmp;
@@ -66,27 +91,25 @@ char	*ft_settoken(const char *str, char c)
 
 char	**ft_split(const char *str, char c)
 {
-	char	**table;
 	size_t	len;
+	size_t	i;
+	char	**result;
 
-	len = 0;
-	if (!str)
+	result = (char **)malloc((ft_splitlen(str, c) + 1) * sizeof(char *));
+	if (!result)
 		return (NULL);
-	table = (char **)malloc((ft_splitlen(str, c) + 1) * sizeof(char *));
-	if (!table)
-		return (NULL);
+	i = 0;
 	while (*str)
 	{
-		while (*str == c && *str)
-			str++;
-		if (*str != c && *str)
+		if (*str != c)
 		{
-			table[len] = ft_settoken(str, c);
-			len++;
-			while (*str != c && *str)
-				str++;
+			len = ft_strlen_s(str, c);
+			result[i++] = ft_settoken(str, c);
+			str = str + len;
 		}
+		else
+			str++;
 	}
-	table[len] = NULL;
-	return (table);
+	result[i] = NULL;
+	return (result);
 }

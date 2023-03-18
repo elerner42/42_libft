@@ -6,11 +6,19 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:06:39 by elerner           #+#    #+#             */
-/*   Updated: 2022/12/15 17:11:05 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/17 23:35:04 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	La función ft_strlcat concatena la cadena de origen src a la cadena 
+	de destino dst, asegurándose de que no se desborde el tamaño máximo 
+	permitido dstsize. El tamaño de la cadena resultante es el tamaño de 
+	dst más el tamaño de src, siempre y cuando la longitud de dst sea menor 
+	que dstsize.
+*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
