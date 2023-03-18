@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:28:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/17 23:19:14 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/18 00:34:25 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,6 @@
     utilizando el caracter ’c’ como delimitador. El
     array debe terminar con un puntero NULL.
 */
-
-static char	**ft_malloc_error(char **res)
-{
-	size_t	i;
-
-	i = 0;
-	while (res[i])
-	{
-		free(res[i]);
-		res[i] = NULL;
-		i++;
-	}
-	free(res);
-	return (NULL);
-}
 
 static size_t	ft_strlen_s(const char *str, char c)
 {
