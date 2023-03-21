@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:40:59 by elerner           #+#    #+#             */
-/*   Updated: 2023/01/20 19:36:35 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/21 20:51:46 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	size_t		a;
-	size_t		b;
 	char		*m_tmp;
 
 	a = 0;
