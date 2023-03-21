@@ -46,9 +46,8 @@ SRCS			=	ft_bzero.c \
 					
 OBJS			:= $(SRCS:.c=.o)
 
-CC				:= gcc
+CC				:= gcc -Wall -Wextra -Werror
 RM				:= rm -f
-CFLAGS			:= -Wall -Wextra -Werror
 
 NAME			:= libft.a
 

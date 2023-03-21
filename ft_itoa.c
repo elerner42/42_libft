@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 21:16:02 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/13 14:34:45 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/21 20:56:06 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@ char	*ft_itoa(int n)
 {
 	int		sign;
 	int		len;
-	int		tmp;
 	char	*str;
 
-	tmp = n;
 	len = ft_lendigi(n);
 	sign = ft_sign(n);
 	if (sign == -1)
