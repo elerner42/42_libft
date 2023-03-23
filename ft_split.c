@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 16:28:37 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/21 20:32:28 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/23 13:04:27 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
     array debe terminar con un puntero NULL.
 */
 
-static size_t	ft_strlen_s(const char *str, char c)
+static size_t	ft_strlen_w(const char *str, char c)
 {
 	size_t	len;
 
@@ -44,7 +44,7 @@ static size_t	ft_splitlen(const char *str, char c)
 	p = 0;
 	if (str[p] == c)
 		len--;
-	while (str[p] != '\0')
+	while (str[p])
 	{
 		if (str[p + 1] == '\0' || (str[p] == c && str[p + 1] != c))
 			len++;
@@ -63,7 +63,10 @@ static char	*ft_settoken(const char *str, char c)
 		len++;
 	tmp = (char *)malloc((len + 1) * sizeof(char));
 	if (!tmp)
-		return (NULL);	
+	{
+		free(tmp);
+		return (NULL);
+	}
 	len = 0;
 	while (str[len] && str[len] != c)
 	{
@@ -80,7 +83,7 @@ char	**ft_split(const char *str, char c)
 	size_t	i;
 	char	**result;
 
-	result = (char **)malloc((ft_splitlen(str, c) + 1) * sizeof(char *));
+	result = malloc((ft_splitlen(str, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -88,7 +91,7 @@ char	**ft_split(const char *str, char c)
 	{
 		if (*str != c)
 		{
-			len = ft_strlen_s(str, c);
+			len = ft_strlen_w(str, c);
 			result[i++] = ft_settoken(str, c);
 			str = str + len;
 		}
