@@ -6,7 +6,7 @@
 /*   By: elerner <elerner@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:31:18 by elerner           #+#    #+#             */
-/*   Updated: 2023/03/18 00:05:01 by elerner          ###   ########.fr       */
+/*   Updated: 2023/03/25 12:14:34 by elerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlen(const char *str)
 	size_t	l;
 
 	l = 0;
-	while (str[l])
+	while (str[l] != '\0')
 	{
 		l++;
 	}
