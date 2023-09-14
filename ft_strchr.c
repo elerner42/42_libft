@@ -22,6 +22,10 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	ch;
 
 	ch = c;
+	if (!s)
+		return (0);
+	if (ch == '\0')
+		return ((*char)s);
 	while (*s)
 	{
 		if (*s == ch)
@@ -30,7 +34,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (ch == '\0')
-		return ((char *)s);
 	return (NULL);
 }
